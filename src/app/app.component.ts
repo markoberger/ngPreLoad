@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pre-load';
+  isToggled = false;
+
+  onToggleHamburger() {
+    this.isToggled = !this.isToggled;
+  }
+  onCloseMenu() {
+    this.isToggled = false;
+  }
 }

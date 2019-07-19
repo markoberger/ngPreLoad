@@ -1,13 +1,18 @@
-<nav class="navbar is-dark">
+<nav class="navbar is-fixed-top is-dark">
   <div class="navbar-brand">
     <a class="navbar-item logo">Foo</a>
+    <a role="button" (click)="onToggleHamburger()" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
   </div>
-  <div class="navbar-menu">
+  <div class="navbar-menu" [ngClass]="{'is-active': isToggled}" id="navbarBasicExample">
     <div class="navbar-start">
-      <a class="navbar-item" routerLink="">Home</a>
-      <a class="navbar-item" routerLink="cibona">Cibona</a>
-      <a class="navbar-item" routerLink="dinamo">Dinamo</a>
-      <a class="navbar-item" routerLink="prog-lang">ProgLang</a>
+      <a class="navbar-item" (click)="onCloseMenu()" routerLink="">Home</a>
+      <a class="navbar-item" (click)="onCloseMenu()" routerLink="cibona">Cibona</a>
+      <a class="navbar-item" (click)="onCloseMenu()" routerLink="dinamo">Dinamo</a>
+      <a class="navbar-item" (click)="onCloseMenu()" routerLink="prog-lang">ProgLang</a>
     </div>
   </div>
 </nav>

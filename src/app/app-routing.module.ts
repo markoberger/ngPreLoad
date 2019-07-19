@@ -12,11 +12,11 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'cibona', loadChildren: '../app/list-cibona/list-cibona.module#ListCibonaModule', data: {preload: true}},
   {path: 'dinamo', loadChildren: '../app/list-dinamo/list-dinamo.module#ListDinamoModule'},
-  {path: 'prog-lang', loadChildren: '../app/list-prog/list-prog.module#ListProgModule'},
+  {path: 'prog-lang', loadChildren: '../app/list-prog/list-prog.module#ListProgModule', data: {preload: true}},
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {preloadingStrategy: NetworkAwarePreloadService})],
+  imports: [RouterModule.forRoot(routes, {preloadingStrategy: false})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
