@@ -1,0 +1,6 @@
+<nav class="panel" *ngIf="(dinamo$ | async) as purgeri">
+  <p class="panel-heading">Dinamo Best 11</p>
+  <a class="panel-block" *ngFor="let purger of purgeri">
+    Br.{{purger.broj}}  {{purger.name}}
+  </a>
+</nav>

@@ -1,0 +1,6 @@
+<nav class="panel" *ngIf="(cibonaList$ | async) as cibona">
+  <p class="panel-heading">Cibona Hall of Fame</p>
+  <a class="panel-block" *ngFor="let cibos of cibona">
+    Br.{{cibos.broj}}  {{cibos.name}}
+  </a>
+</nav>
